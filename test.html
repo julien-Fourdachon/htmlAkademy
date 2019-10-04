@@ -13,49 +13,119 @@
 </head>
 
 <body>
-    <div id="header">
+    <header>
         <div class="menu">
-            <a class="menu-item" href="#">Notre concept</a>
-            <a class="menu-item" href="#">Nos destinations</a> 
+            <a class="menu-item filter-js" data-image="image1" datas="content1" id="menu1" href="#">Notre concept</a>
+            <a class="menu-item filter-js" data-image="image2" datas="content2" href="#">Nos destinations</a>
         </div>
         <h1>Seecretspot</h1>
         <div class="menu">
-            <a class="menu-item" href="#">Contact</a>
-            <a class="menu-item" href="#">Espace emploi</a>
+            <a class="menu-item filter-js" data-image="image3" datas="content3" href="#">Réservation</a>
+            <a class="menu-item filter-js" data-image="image4" datas="content4" href="#">Espace emploi</a>
         </div>
-    </div>
+    </header>
     <div class="flex">
         <div class="home-picture-line">
             <div class="home-picture">
-                <img src="img/picture1.jpeg" alt="photo d'un paysage" />
-                <span><a href="#">Notre concept</a></span>
+                <img class="filter-js picture" data-image="image1" src="img/picture1.jpeg" alt="photo d'un paysage" />
+                <span class="filter-js span" datas="content1" data-image="image1"><a href="#">Notre concept</a></span>
+                <!-- Modal -->
+                <div id="modal1" class="content content-up content1" datas="content1">
+                    <p>Partez en voyage vers une destination inconnue!<br>
+                        Choisissez parmis nos critères, définissez votre budget...<br>
+                        Et laissez vous surprendre!</p>
+                </div>
             </div>
             <div class="home-picture">
-                <img src="img/picture2.jpeg" alt="photo d'un paysage" />
-                <span><a href="#">Nos destinations</a></span>
+                <img class=" filter-js picture" data-image="image2" src="img/picture2.jpeg" alt="photo d'un paysage" />
+                <span class="filter-js span" datas="content2" data-image="image2">Nos
+                        destinations</a></span>
+                <!-- Modal -->
+                <div id="modal2" class="content content-up content2" datas="content2">
+                    <p>Les plus belles villes, les plus belles plages<br>
+                        ou encore les activités les lus délirantes,<br>
+                        ous proposons des destinations<br>
+                        sur les cinq continents!<br>
+                        Alors n'hésitez plus!!!</p>
+                </div>
             </div>
         </div>
         <div class="home-picture-line">
             <div class="home-picture">
-                <img src="img/picture3.jpeg" alt="photo d'un paysage" />
-                <span><a href="#">Contactez-nous</a></span>
+                <img class="filter-js picture" data-image="image3" src="img/picture3.jpeg" alt="photo d'un paysage" />
+                <span class="filter-js span" datas="content3" data-image="image3"><a>Réservation</a></span>
+                <!-- Modal -->
+                <div id="modal3" class=" content content-down content3" datas="content3">
+                    <p>Nous vous recacterons très vite!</p>
+                    <form action="" method="post">
+                        <div id="contact">
+                            <div>
+                                <fieldset>
+                                    <input placeholder="Votre nom" type="text" tabindex="1" required autofocus>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Votre prénom" type="text" tabindex="1" required autofocus>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Votre email" type="email" tabindex="2" required>
+                                </fieldset>
+                                <fieldset>
+                                    <input placeholder="Votre numéro de téléphone" type="tel" tabindex="3" required>
+                                </fieldset>
+                                <fieldset>
+                                    <select>
+                                        <option value="" disabled selected>Votre destination</option>
+                                        <option value="europe">Europe</option>
+                                        <option value="asie">Asie</option>
+                                        <option value="afrique">Afrique</option>
+                                        <option value="amerique">Amérique</option>
+                                        <option value="oceanie">Océanie</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                            <div>
+
+                                <fieldset>
+                                    <select>
+                                        <option value="" disabled selected>Activité principale</option>
+                                        <option value="europe">Visites</option>
+                                        <option value="asie">Plages</option>
+                                        <option value="afrique">Sensations</option>
+                                        <option value="amerique">Gastronomie</option>
+                                        <option value="oceanie">Culture</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div>
+                            <input class="submit" type="submit" value="Envoyer">
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="home-picture">
-                <img src="img/picture4.jpeg" alt="photo d'un paysage" />
-                <span><a href="#">Espace emploi</a>
-                </span></div>
+                <img class="filter-js picture" data-image="image4" src="img/picture4.jpeg" alt="photo d'un paysage" />
+                <span class="filter-js span" datas="content4" data-image="image4"><a>Espace emploi</a></span>
+                <!-- Modal -->
+                <div id="modal4" class="content content-down content4" datas="content4">
+                    <p>Aucune offre n'est à pourvoir our le moment.<br>
+                        Nous sommes cependant régulièrement à la recherche de talents.<br>
+                        Pour une candidature spontanée, envoyer votre dossier à:<br>
+                        contact@seecretspot.com</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+    <script src="js/jquery-4.3.1.js"></script>
+    <script src="js/test.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
 </body>
 
 </html>
