@@ -8,41 +8,44 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/test.css">
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <title>Seecretspot</title>
 </head>
 
 <body>
     <header>
         <div class="menu">
-            <a class="menu-item filter-js" data-image="image1" datas="content1" id="menu1" href="#">Notre concept</a>
-            <a class="menu-item filter-js" data-image="image2" datas="content2" href="#">Nos destinations</a>
+            <!--class filter-js, attr data-image + data-modal used in js-->
+            <a class="menu-item filter-js" data-image="image1" data-modal="content1" id="menu1" href="#">Notre
+                concept</a>
+            <a class="menu-item filter-js" data-image="image2" data-modal="content2" href="#">Nos destinations</a>
         </div>
         <h1>Seecretspot</h1>
         <div class="menu">
-            <a class="menu-item filter-js" data-image="image3" datas="content3" href="#">Réservation</a>
-            <a class="menu-item filter-js" data-image="image4" datas="content4" href="#">Espace emploi</a>
+            <a class="menu-item filter-js" data-image="image3" data-modal="content3" href="#">Réservation</a>
+            <a class="menu-item filter-js" data-image="image4" data-modal="content4" href="#">Espace emploi</a>
         </div>
     </header>
     <div class="flex">
         <div class="home-picture-line">
             <div class="home-picture">
                 <img class="filter-js picture" data-image="image1" src="img/picture1.jpeg" alt="photo d'un paysage" />
-                <span class="filter-js span" datas="content1" data-image="image1"><a href="#">Notre concept</a></span>
+                <span class="filter-js span" data-modal="content1" data-image="image1">Notre concept</span>
                 <!-- Modal -->
-                <div id="modal1" class="content content-up content1" datas="content1">
-                    <p>Partez en voyage vers une destination inconnue!<br>
+                <div class="content content-up content1" data-modal="content1">
+                    <p class="filter-js">Partez en voyage vers une destination inconnue!<br>
                         Choisissez parmis nos critères, définissez votre budget...<br>
                         Et laissez vous surprendre!</p>
                 </div>
             </div>
             <div class="home-picture">
                 <img class=" filter-js picture" data-image="image2" src="img/picture2.jpeg" alt="photo d'un paysage" />
-                <span class="filter-js span" datas="content2" data-image="image2">Nos
-                        destinations</a></span>
+                <span class="filter-js span" data-modal="content2" data-image="image2">Nos
+                    destinations</span>
                 <!-- Modal -->
-                <div id="modal2" class="content content-up content2" datas="content2">
-                    <p>Les plus belles villes, les plus belles plages<br>
+                <div class="content content-up content2" data-modal="content2">
+                    <p class=" filter-js">Les plus belles villes, les plus belles plages<br>
                         ou encore les activités les lus délirantes,<br>
                         ous proposons des destinations<br>
                         sur les cinq continents!<br>
@@ -51,20 +54,22 @@
             </div>
         </div>
         <div class="home-picture-line">
-            <div class="home-picture">
+            <div class="home-picture ">
                 <img class="filter-js picture" data-image="image3" src="img/picture3.jpeg" alt="photo d'un paysage" />
-                <span class="filter-js span" datas="content3" data-image="image3"><a>Réservation</a></span>
+                <span class="filter-js span" data-modal="content3" data-image="image3">Réservation</span>
                 <!-- Modal -->
-                <div id="modal3" class=" content content-down content3" datas="content3">
+                <div class="content content-down content3" data-modal="content3">
                     <p>Nous vous recacterons très vite!</p>
-                    <form action="" method="post">
+                    <!--Add action and method to form-->
+                    <form class="filter-js">
                         <div id="contact">
                             <div>
+                                <!--Add attr name to input-->
                                 <fieldset>
                                     <input placeholder="Votre nom" type="text" tabindex="1" required autofocus>
                                 </fieldset>
                                 <fieldset>
-                                    <input placeholder="Votre prénom" type="text" tabindex="1" required autofocus>
+                                    <input placeholder="Votre prénom" type="text" tabindex="1" required>
                                 </fieldset>
                                 <fieldset>
                                     <input placeholder="Votre email" type="email" tabindex="2" required>
@@ -84,7 +89,6 @@
                                 </fieldset>
                             </div>
                             <div>
-
                                 <fieldset>
                                     <select>
                                         <option value="" disabled selected>Activité principale</option>
@@ -105,10 +109,10 @@
             </div>
             <div class="home-picture">
                 <img class="filter-js picture" data-image="image4" src="img/picture4.jpeg" alt="photo d'un paysage" />
-                <span class="filter-js span" datas="content4" data-image="image4"><a>Espace emploi</a></span>
+                <span class="filter-js span" data-modal="content4" data-image="image4">Espace emploi</span>
                 <!-- Modal -->
-                <div id="modal4" class="content content-down content4" datas="content4">
-                    <p>Aucune offre n'est à pourvoir our le moment.<br>
+                <div class=" content content-down content4" data-modal="content4">
+                    <p class="filter-js">Aucune offre n'est à pourvoir our le moment.<br>
                         Nous sommes cependant régulièrement à la recherche de talents.<br>
                         Pour une candidature spontanée, envoyer votre dossier à:<br>
                         contact@seecretspot.com</p>
@@ -116,6 +120,9 @@
             </div>
         </div>
     </div>
+    <footer>
+        <p>@Copyright tous droits réservés.</p>
+    </footer>
 
     <script src="js/jquery-4.3.1.js"></script>
     <script src="js/test.js"></script>
